@@ -20,7 +20,7 @@ const BlogList = () => {
             <>
               <p>{element.title}</p>
              
-              <h4>#{element.author}</h4>
+              <h4>#{}</h4>
             </>
           );
         })}
