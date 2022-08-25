@@ -1,18 +1,31 @@
-import react, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const BlogList = () => {
-  const [allBlogs, setAllBlogs] = useState();
+  const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3100/")
+    fetch("https://newfullstac.herokuapp.com/")
       .then((res) => res.json())
-      .then((data) => console.log(data)); //set blogs here
-  });
+      .then((data) => setBlogs(data));
+  }, []);
+
+  if (!blogs) return null;
 
   return (
-    <div>
+    <>
       <h1>All Blogs</h1>
-    </div>
+      <div>
+        {blogs.map((element) => {
+          return (
+            <>
+              <p>{element.title}</p>
+             
+              <h4>#{element.author}</h4>
+            </>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

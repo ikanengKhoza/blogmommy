@@ -2,11 +2,11 @@ import React, { useState } from "react";
 //import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const AddAVideo = () => {
+const AddABlogPost = () => {
   const [title, setTitle] = useState(" ");
   const [text, setText] = useState(" ");
   const [author, setAuthor] = useState(" ");
-  const baseURL = "https://blog-mommy.herokuapp.com/";
+  const baseURL = "http://blog-mommy.herokuapp.com/";
 
   //const navigate = useNavigate();
 
@@ -88,4 +88,4 @@ const AddAVideo = () => {
     </>
   );
 };
-export default AddAVideo;
+export default AddABlogPost;

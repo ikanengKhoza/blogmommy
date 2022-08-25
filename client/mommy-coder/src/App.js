@@ -1,11 +1,14 @@
-import AddBlogs from "./AddBlog"
+
+import AddABlog from './AddBlog';
 import './App.css';
+import BlogList from './BlogList';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <AddBlogs />
+      <BlogList />
+      <AddABlog />
       </header>
     </div>
   );
